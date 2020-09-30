@@ -72,7 +72,7 @@ const handleNoteDelete = function (event) {
   if (activeNote.id === note.id) {
     activeNote = {};
   }
-
+// passes in note.id because each note has an id
   deleteNote(note.id).then(() => {
     getAndRenderNotes();
     renderActiveNote();
