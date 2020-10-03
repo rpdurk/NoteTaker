@@ -9,7 +9,7 @@ const port = 3000;
 //ensures all the routes go to the correct place (send file starts in the public folder)
 app.use(express.static('public'));
 
-// line 3/4 gives access to these files and app.use impliments their utilization
+// line 3/4 gives access to these files and app.use implements their utilization
 app.use(htmlRoutes);
 app.use(apiRoutes);
 
