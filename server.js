@@ -6,6 +6,8 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+app.use(express.urlencoded({ extended: true }));
+
 //ensures all the routes go to the correct place (send file starts in the public folder)
 app.use(express.static('public'));
 
