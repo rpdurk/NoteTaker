@@ -4,7 +4,7 @@ const htmlRoutes = require('./routes/htmlRoutes');
 const apiRoutes = require('./routes/apiRoutes');
 const app = express();
 
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 //ensures all the routes go to the correct place (send file starts in the public folder)
 app.use(express.static('public'));

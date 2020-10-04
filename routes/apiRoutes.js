@@ -1,28 +1,28 @@
 const router = require('express').Router();
 const fs = require('fs');
 const util = require('util');
-const writeFileAsync = require('fs.writeFile');
-const readFileAsync = require('fs.readFile');
-let data = require('../source/db/db.json');
+// const writeFileAsync = require('fs.writeFile');
+// const readFileAsync = require('fs.readFile');
+// let data = require('../source/db/db.json');
 
 // * The following API routes should be created:
 //   * GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
 router.get('/api/notes', function(req, res) {
-    res.send(JSON.parse('db/db.json'));
+    res.send(JSON.parse(fs.readFileSync("./source/db/db.json")));
 });
 
 //   * POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
 // use the length of the array as the id for each notes
 router.post('/api/notes', function(req, res) {
   // data from noteLIst should be put into an array
-  noteList = JSON.parse(noteList);
+  noteList = JSON.parse(fs.readFileSync("db/db.json"));;
+  newNote = req.body;
   // utilize the length of the array to create an id
-  req.body.id = notesList.length;
-  noteList.push(req.body);
+  newNote.id = notesList.length;
+  noteList.push(newNote);
   // rewrite the data into a string
-  noteList = JSON.stringify(noteList);
+  fs.writeFileSync("./source/db/db.json", JSON.stringify(noteList));
   // write file into the file location stored above
-  fs.writeFile(data);
   res.json.parse(noteList);
 });
 
