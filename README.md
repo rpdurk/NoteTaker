@@ -33,11 +33,11 @@ In this application, the user can add, save, and delete notes.
 
 If the user is interested in adding and saving a note, type in a title and the details.  A save icon will appear in the top right corner.  Simply click, and refresh the page to save the note. 
 
-<p><img src="public/assets/images/createNotes"width="600"></p>
+<p><img src="public/assets/images/createNotes.png"width="600"></p>
 
 If you the notes are completed and added to the trash can, then locate the note on the left hand side, and click the trash can icon.
 
-<p><img src="public/assets/images/deleteNotes"width="600"/></p>
+<p><img src="public/assets/images/deleteNotes.png"width="600"/></p>
 
 ## Built With
 
