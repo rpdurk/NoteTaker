@@ -15,4 +15,4 @@ app.use(express.static('public'));
 app.use(htmlRoutes);
 app.use(apiRoutes);
 
-app.listen(3000, () => console.log(`server started at http://localhost:3000`));
+app.listen(PORT, () => console.log(`server started at port ${PORT}`));
